@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    /* Custom properties */
+    --primary-light-text-color: #9d64b0;
+    --primary-text-color: #181820;
+    --shadow-color: #201818;
+    --secondary-light-text-color: #fffcf0;
+    --secondary-text-color: #80638a;
+    --durability-text-color: #4a2b54;
+    --icon-color: #d290e8;
+    --border-color: #d290e8;
+    --text-decoration-color:#d290e8;
+}
+
+.container:not(:first-child) {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 900px;
+    border-top: 3px solid var(--border-color);
+}
+
+.fh {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fvs {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.resume {
+    margin: 50px auto;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    padding: 0px 0px 30px 0px;
+    max-width: 900px;
+}
+
+.resume__block {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+.container.background__avatar {
+    background: rgba(0, 0, 0, 0.2) url(https://i.pinimg.com/564x/2a/85/9a/2a859a48a0ff36feeb53a1602fcab53f.jpg);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 50px;
+}
+
+.container.background__avatar .resume__block{
+    margin-bottom: 0px;
+}
+
+
+
+
+
+
+/* Contact info styles */
+
+.contact-info__header {
+    color: var(--primary-light-text-color);
+    margin-bottom: 15px;
+    text-decoration-color: var(--text-decoration-color);
+    text-decoration-line: underline;
+}
+
+.contact-info__sub-header {
+    color: var(--primary-light-text-color);
+}
+
+.contact-info__block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    
+}
+
+.contact-info__row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.contact-info__item {
+    color: var(--secondary-light-text-color);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+}
+
+.contact-info__item > span {
+    margin: 0 10px;
+}
+
+.contact-info__item:not(:last-child) {
+    margin-bottom: 0px;
+    
+}
+
+.contact-info__item-icon-wrapper {
+    margin-right: 10px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info__item-icon path {
+    fill: var(--icon-color);
+}
+
+.contact-info__item-icon {
+    height: 1.1428rem;
+    vertical-align: text-bottom;
+
+}
+
+.contact-info__avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid;
+    border-color: var(--text-decoration-color);
+}
+
+/* Intro and skills styles */
+
+.intro {
+    display: flex;
+    justify-content: start;
+    margin-top: 30px;
+    max-width: 55%;
+    padding: 10px;
+    word-wrap:break-word;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+.intro__icon-wrapper {
+    margin-right: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro__icon {
+    height: 1.1428rem;
+    vertical-align: text-bottom;
+}
+
+.intro__icon path {
+    fill: var(--text-decoration-color);
+}
+
+.intro_text {
+    color: var(--secondary-light-text-color);
+    text-align: justify;
+}
+
+.skills__header, .contacts__header {
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.skills__text {
+    color: var(--secondary-text-color);
+    text-align: justify;
+}
+
+
+
+/* Experience and additonal info styles */
+
+.experiences {
+    flex: 1 1 60%;
+    margin-right: 50px;
+}
+
+.experiences__header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experiences__company-header-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.experiences__company-header-name {
+    color: var(--primary-text-color);
+    text-decoration-color: var(--text-decoration-color);
+    text-decoration-line: underline;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experiences__company-project {
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.experiences__company-project-role {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.experiences__company-project-name {
+    color: var(--primary-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.experiences__company-project-responsibilities {
+    color: var(--secondary-text-color);
+    padding-left: 20px;
+}
+
+.additional-info {
+    flex: 1 1 40%;
+}
+
+.additional-info__education {
+    margin-bottom: 20px;
+}
+
+.additional-info__education-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__education-university-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.additional-info__education-university-speciality {
+    color: var(--primary-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.additional-info__education-university-name {
+    color: var(--secondary-text-color);
+}
+
+.additional-info__languages {
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-item {
+    color: var(--secondary-text-color);
+}
+
+@media screen and (max-width: 576px) {
+
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact-info__item {
+        justify-content: center;
+    }
+
+    .contact-info__block:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
+
+    .contact-info__header,
+    .contact-info__sub-header {
+        text-align: center;
+    }   
+
+    .intro {
+        padding: 5px;
+        max-width: 100%;
+    }
+}
